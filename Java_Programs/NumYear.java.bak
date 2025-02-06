@@ -1,0 +1,22 @@
+import java.util.Scanner;
+class NumYear 
+{
+	public static void main(String[] args) 
+	{
+		minDay = 1440;
+		daysYear = 365;
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter the number of minutes ");
+		long min = sc.nextLong();
+
+		long totDays = min/minDay;
+		long year= totDays/daysYear;
+
+		long remainingDays=titDays%daysYear;
+
+		System.out.println(min +" minutes is approximately "+year+" years and "+remainingDays+ " days. ");
+
+
+	}
+}

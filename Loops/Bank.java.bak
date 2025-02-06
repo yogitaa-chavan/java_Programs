@@ -1,0 +1,152 @@
+import java.util.Scanner;
+class  Bank
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		String pass1=null;
+		String userName1=null;
+		String address=null;
+		long contact =0l;
+		double balance=0.0;
+	
+		for( ; ;){
+		System.out.println("		Welcome");
+		System.out.println();
+		System.out.println("1. Existing user ");
+		System.out.println("2. Create New Account ");
+		System.out.print("Choose your option ");
+		int opt=sc.nextInt();
+		System.out.println();
+		if(opt==1){
+				
+			if(userName1==null){
+					System.out.println("Create Your Account First ");
+					continue;
+				}
+
+					System.out.println("Login");				
+					System.out.println();
+
+			for(int i=3;i>=1;i--){
+				System.out.println("Enter a user name ");
+				String userName=sc.next();
+				System.out.println("Enter a password");
+				String pass=sc.next();
+				if(userName.equals(userName1) && pass.equals(pass1)){
+						home:
+						for( ; ;)
+					{					
+						System.out.println();
+						System.out.println("Home Page");
+						System.out.println();
+						System.out.println("1. Deposite");
+						System.out.println("2. Withdraw");
+						System.out.println("3. Check Balance");
+						System.out.println("4 Mini Statement");
+						System.out.println("5. Logout");
+						System.out.println();
+						System.out.print("Enter an option");
+						int opt2=sc.nextInt();
+						switch(opt2){
+							case 1:{
+							System.out.println("Deposit");
+							System.out.println();
+
+							System.out.println("Enter a amount");
+							double Newbalance=sc.nextDouble();
+							balance+=Newbalance;
+							System.out.println("Amount deposited successfully");
+							System.out.println();
+							break;
+						}
+						case 2:{
+						System.out.println("withdraw ");
+						System.out.println();
+						System.out.println("Enter the amount ");
+						double withdraw=sc.nextDouble();
+						System.out.println("Enter the pin");
+						if(pass.equals(pass1)){
+							if(withdraw<balance){
+								balance-=withdraw;
+								System.out.println("Amount debited successfully");
+
+							}else{
+								System.out.println("Inefficiant amount");
+							}
+						}
+						else{
+							System.out.println("wrong pin ");
+						}
+						break;
+						}
+						case 3:{
+							System.out.println("check balance ");
+							System.out.println();
+							for(int j=3;j>=1;j--){
+								System.out.println();
+								System.out.println("Enter the pin ");
+						
+								String pass2=sc.next();
+							  if(pass2.equals(pass1)){
+								System.out.println("Total Amount : "+balance +"rs");
+								continue home;
+						}else{
+							System.out.println("wrong pin");
+							System.out.println("Attempt left "+(j+1));
+						}
+						}
+						System.out.println("Your account has been blocked for 24 hours ");
+						System.exit(0);
+						break;
+						}
+						case 4:{
+							System.out.println("Mini Statement : ");
+							System.out.println();
+							break;
+						}
+						case 5:{
+							System.out.println("Thank you for using our app");
+							System.out.println("visit again ");
+							System.exit(0);
+						}
+						}
+					}
+				}					
+						else{
+							System.out.println("Invalid credential");
+							System.out.println("Attempt left"+(i-1));
+						}
+
+
+				}
+										
+				System.out.println("Thank you & never visit again ");
+				System.exit(0);
+			}
+		else if(opt==2){
+			System.out.println("Account Creation : ");
+			
+			System.out.println("Enter your Name:");
+			String name = sc.next();
+			System.out.println("Enter your password");
+			String pass2=sc.next();
+			System.out.println("Enter your Contact");
+			long contact2=sc.nextLong();
+			sc.nextLine();
+			System.out.println("Deposit Amount : ");
+			balance = sc.nextDouble();
+			System.out.println();
+			System.out.println("Account created successfully");
+			System.out.println();
+
+
+		}else{
+			System.out.println("Invalid option");
+		}
+		
+			}
+
+		}
+
+	}

@@ -1,0 +1,12 @@
+import java.util.Scanner;
+class CheckChar 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		char ch = sc.next().charAt(0);
+		String ans = ((ch>='A' && ch<='Z') || (ch>='a' && ch<='z')) ? (ch>='a' && ch<=122)?(ch + " is a lower case Character") :
+			(ch+" is an upeer case character") : (ch>='0' && ch<='9')?(ch + " is a digit") : (ch + " is special character");
+		System.out.println(ans);
+	}
+}

@@ -1,0 +1,12 @@
+class ArPeriOfRectangle 
+{
+	public static void main(String[] args) 
+	{
+		float width = 4.5f;
+		float height = 7.9f;
+
+		double ans = width*height;
+
+		System.out.println("Area of rectangle is "+ ans);
+	}
+}

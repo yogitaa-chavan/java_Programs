@@ -1,0 +1,11 @@
+class PrintAlphabet 
+{
+	public static void main(String[] args) 
+	{
+		char ch='A';
+		while(ch<='z'){
+		System.out.print(ch+" ");
+		ch++;
+		}
+	}
+}
