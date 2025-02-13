@@ -1,0 +1,59 @@
+class Numseries2 
+{
+	public static void main(String[] args) 
+	{
+		
+        int terms = 6;  // Number of terms in the series
+        long prevTerm = 1;  // Start with the first term (1)
+        
+        // Print the first term
+        System.out.print(prevTerm + " ");
+        
+        // Loop to generate the terms of the series
+        for (int i = 1; i < terms; i++) {
+            if (i == 2) {
+                prevTerm = prevTerm * 3 + 6;  // Apply multiplication by 3 + 6
+            } else if (i == 3) {
+                prevTerm = prevTerm * 5;  // Apply multiplication by 5
+            } else if (i == 4) {
+                prevTerm = prevTerm * 6;  // Apply multiplication by 6
+            } else {
+                prevTerm = prevTerm * 3;  // Apply multiplication by 3 (for other cases)
+            }
+            System.out.print(prevTerm + " ");  // Print the current term
+        }
+
+
+
+
+
+/*
+
+
+		int n=6;
+		int res;
+		int prev1=3;
+		int prev2=1;
+		System.out.print(prev2+" " +prev1+ " ");
+		for(int i=3;i<=n;i++){
+				res=prev1*prev2;
+				System.out.print(res+" ");
+
+				prev2=prev1;
+				prev1=res;
+			}
+			
+
+/*
+		int n=1;
+		for(int i=2;i<8;i++){
+			//int p=1;
+			for(int j=1;j<n;j++){
+				n*=j;
+			}
+			n++;
+			System.out.println(n);
+		}*/
+	}
+
+}
